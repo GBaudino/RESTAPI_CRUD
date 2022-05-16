@@ -9,4 +9,4 @@ In order to run the code without problems, when cloning the repo, make sure it's
 
 After installing the dependencies, you can run the server by executing the command in the console:
 
-**uvicorn app:app --reload**
+**python -m uvicorn app:app --reload**
