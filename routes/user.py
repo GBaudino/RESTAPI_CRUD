@@ -27,8 +27,7 @@ def create_user(user: User):
 
 @user.get("/users/{id}", response_model = User, response_description = "Get a user from its id", tags = ["users"])
 def get_user(id: str):
-    user = (connection.execute(users.select().where(users.c.id == id)).first())
-    return (user if user != "null" else f"ERROR: User with ID {id} was not found")
+    return connection.execute(users.select().where(users.c.id == id)).first()
 
 
 @user.delete("/users/{id}", status_code = status.HTTP_204_NO_CONTENT, response_description = "Delete a user from its id", tags = ["users"])
