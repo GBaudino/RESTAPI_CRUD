@@ -3,13 +3,13 @@ Simple users management REST API implement with fastAPI and sqlite relational da
 
 ### How to run?
 
-In order to run the code without problems, when cloning the repo, make sure it's inside the folder and then install the dependencies with a command in the console:
+In order to run the code without problems, when cloning the repo, make sure it's inside the folder and then install the dependencies (I recommend [reading](https://docs.python.org/3/tutorial/venv.html) how to create a virtual environment to isolate the dependencies of this project from your python environment) with a command in the console:
 
-**pip install -r requirements.txt**
+**python3 -m pip install -r requirements.txt**
 
 After installing the dependencies, you can run the server by executing the command in the console:
 
-**python -m uvicorn app:app --reload**
+**python3 -m uvicorn main:app --reload**
 
 ### How to use it?
 You can use an application for API testing and management or you can use the documentation built into the fastAPI framework.
@@ -17,7 +17,7 @@ You can use an application for API testing and management or you can use the doc
 To access this we must access:
 **localhost:HOSTPORT/docs**
 
-- By default HOSTPORT = 8000, then it will suffice to enter **localhost:8000/docs**
+- By default HOSTPORT = 8000, then it will suffice to enter [**localhost:8000/docs**](http://localhost:8000/docs)
 
 From here we can see the documentation of each of the routes, their use, an example of what they should return to us and we can even test them from "Try it out"
 
