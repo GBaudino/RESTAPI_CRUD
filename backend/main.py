@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from apps.user.routes import user
 from config import settings
 import uvicorn
@@ -12,6 +13,10 @@ app = FastAPI(
         "description": "Users manipulation routes"
     }]
 )
+
+@app.get('/')
+def redirect_to_docs():
+    return RedirectResponse(url="/docs/")
 
 @app.on_event("startup")
 async def configure_routes():
