@@ -8,23 +8,23 @@ Simple users management REST API implement with fastAPI and sqlite relational da
 In order to run the code without problems, when cloning the repo, make sure it's inside the folder and then install the dependencies (I recommend [reading](https://docs.python.org/3/tutorial/venv.html) how to create a virtual environment to isolate the dependencies of this project from your python environment) with a command in the console:
 
 ```bash
-cd /RESTAPI_CRUD && python3 -m pip install -r requirements.txt
+cd RESTAPI_CRUD/ && python3 -m pip install -r requirements.txt
 ```
 
 After installing the dependencies, you can run the server by executing the command in the console:
 
 ```bash
-cd /backend && python3 -m uvicorn main:app --reload
+cd backend/ && python3 -m uvicorn main:app --reload
 ```
 
 ### With Docker version
 
-First make sure you have docker installed on your computer, if not you can see the official documentation to install it.
+First make sure you have docker installed on your computer, if not you can see the [documentation to install it](https://docs.docker.com/engine/install/).
 
 After this, we must execute the command:
 
 ```bash
-cd /RESTAPI_CRUD && docker build -t test .
+cd RESTAPI_CRUD/ && docker build -t test .
 ```
 
 Finally to run the app in the container exposing port 8000 we will use the command:
@@ -33,7 +33,7 @@ Finally to run the app in the container exposing port 8000 we will use the comma
 docker run -it --name testcontainer -p 8000:8000 test
 ```
 
-### How to use it?
+## How to use it?
 You can use an application for API testing and management or you can use the documentation built into the fastAPI framework.
 
 To access this we must access:
